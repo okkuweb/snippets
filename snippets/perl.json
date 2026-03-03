@@ -172,5 +172,11 @@
       "",
       "1; # Return true to indicate successful module loading"
     ]
-  }
+  },
+    "dump a variable to tmp": {
+        "prefix": "dumper",
+        "body": [
+            "use Data::Dumper; open my $tfh, '>', '/tmp/holladolla.txt.${1:file name}' or die('shiiiiiit $!'); print $tfh Dumper(${variable}); close $tfh;"
+        ]
+    }
 }
